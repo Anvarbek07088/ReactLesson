@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    background-color: aquamarine;
+    padding: 190px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    height: 100vh;
+}
+
+#root>div:nth-child(1){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+.sectionImg{
+    width: 50px;
+    height: 50px;
+    background-image: url(./img/ui8.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}
+.sectionP{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: rgb(1, 35, 63);
+}
+
+.sectionSpan{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(1, 11, 44);
+}
+
+#root>div:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 25px;
+}
+
+#root>div>div{
+    padding: 30px;
+    background-color: green;
+    border-radius: 10px;
+    box-shadow:  0 0 10px black;
+    transition: 0.3s;
+}
+#root>div>div:hover{
+    transition: 0.7s;
+    transform: scale(1.1);
+}
