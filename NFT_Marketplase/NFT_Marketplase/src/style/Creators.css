@@ -1,0 +1,212 @@
+.Creators {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  padding: 80px 100px;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 60px;
+  align-self: stretch;
+  background: var(--Background, #2b2b2b);
+}
+.CreatorsText1 {
+  flex: 1 0 0;
+  color: var(--White, #fff);
+  /* H3 - Work Sans */
+  font-family: Work Sans;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 45.6px */
+  text-transform: capitalize;
+}
+.CreatorsText2 {
+  color: var(--White, #fff);
+  /* Body Text- Work Sans */
+  font-family: Work Sans;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 35.2px */
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+.CreatorRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.creatorBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.creatorBox1 {
+  width: 240px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex: 1 0 0;
+  border-radius: 20px;
+  background: #3b3b3b;
+}
+.creatorBox1:hover{
+    box-shadow: 0 0 20px rgb(15, 15, 15);
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+.CrBox1ImgId {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 15px;
+  margin-right: 35px;
+}
+.CrBox1ImgId span {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  left: 20px;
+  color: var(--caption-label-text, #858584);
+  text-align: center;
+  /* Base (Body) - Space Mono */
+  font-family: Space Mono;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  border-radius: 20px;
+  background: var(--Background, #2b2b2b);
+}
+.CreatorUserNmae {
+  color: #fff;
+
+  text-align: center;
+  /* H5 - Work Sans */
+  font-family: Work Sans;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 30.8px */
+  text-transform: capitalize;
+}
+.CreatorTotal {
+  color: var(--caption-label-text, #858584);
+  text-align: right;
+  /* Base(Body) - Work Sans */
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+.CreatorTotal span {
+  color: var(--Text, #fff);
+  /* Base (Body) - Space Mono */
+  font-family: Space Mono;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+.creatorsBtn button{
+  display: flex;
+  height: 60px;
+  padding: 0px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  border: 2px solid var(--Call-to-Action, #a259ff);
+  color: #fff;
+  background-color: transparent;
+  text-align: center;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 22.4px */
+  cursor: pointer;
+}
+.creatorsBtn button:active{
+   transform: scale(0.95);
+   transition: 0.5s;
+}
+
+@media screen and (max-width:800px) {
+  .Creators{
+    width: 800px;
+    padding: 40px 40px;
+    overflow: hidden;
+  }
+  .creatorBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    justify-content: center;
+    gap: 30px;
+  }
+  .creatorBox1{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+  }
+  .CrBox1ImgId{
+    display: flex;
+    gap: 0;
+  }
+  .CrBox1ImgId span{
+    margin-right: -25px;
+    font-size: 20px;
+    padding: 10px;
+    z-index: 1;
+  }
+  #noneBox{
+    display: none;
+  }
+}
+@media screen and (max-width:375px) {
+  .Creators{
+    width: 375px;
+    padding: 40px 20px;
+    overflow: hidden;
+  }
+  .creatorBox{
+    display: grid;
+    grid-template-columns: 1fr  ;
+    justify-content: center;
+    gap: 30px;
+  }
+  .creatorBox1{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+  }
+  .CrBox1ImgId{
+    display: flex;
+    gap: 0;
+  }
+  .CrBox1ImgId span{
+    margin-right: -25px;
+    font-size: 20px;
+    padding: 10px;
+    z-index: 1;
+  }
+  #noneBox{
+    display: none;
+  }
+  .CreatorRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 10px;
+  }
+}

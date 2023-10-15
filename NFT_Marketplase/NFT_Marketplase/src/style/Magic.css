@@ -1,0 +1,179 @@
+.Magic {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  padding: 360px 100px 60px 100px;
+  align-items: flex-end;
+  justify-content: space-between;
+  align-self: stretch;
+  background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
+  background-image: url(../components/image/MagicBacround.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.MagicText {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.MagicText p:nth-child(1) {
+  max-width: 151px;
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  background: #3b3b3b;
+  color: #fff;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+.MagicText p:nth-child(2) {
+  align-self: stretch;
+  color: #fff;
+  font-family: Work Sans;
+  font-size: 51px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 56.1px */
+  text-transform: capitalize;
+}
+.MagicText button {
+  max-width: 198px;
+  display: flex;
+  height: 60px;
+  padding: 22px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  background: var(--Text, #fff);
+  color: var(--Background, #2b2b2b);
+  text-align: center;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 22.4px */
+  border: none;
+}
+.MagicTimeBox {
+  display: flex;
+  width: 295px;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: rgba(59, 59, 59, 0.5);
+  backdrop-filter: blur(5px);
+}
+.MagicTimeBox p {
+  align-self: stretch;
+  color: var(--Text, #fff);
+  /* Caption - Space Mono */
+  font-family: Space Mono;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 13.2px */
+}
+.MagicTimeBox ul {
+  display: flex;
+  gap: 10px;
+}
+.MagicTimeBox ul li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.MagicTimeBox ul li p {
+  align-self: stretch;
+  color: var(--Text, #fff);
+  /* H3 - Space Mono */
+  font-family: Space Mono;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 45.6px */
+  text-transform: capitalize;
+}
+.MagicTimeBox ul li span {
+  flex: 1 0 0;
+  align-self: stretch;
+  color: var(--Text, #fff);
+  /* Caption - Space Mono */
+  font-family: Space Mono;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 13.2px */
+}
+
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: translateY(100%) scale(0.5);
+    }
+    5%, 20%{
+        opacity: 0.4;
+        transform: translateY(100%) scale(0.7);
+    }
+    25%,40%{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0%) scale(1);
+    }
+    45%, 60%{
+        opacity: 0.4;
+        transform: translateY(-100%) scale(0.7);
+    }
+    65%{
+        opacity: 0.4;
+        transform: translateY(-100%) scale(0.5);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-100%) scale(0);
+    }
+}
+@media screen and (max-width:800px) {
+  .Magic{
+    width: 800px;
+    padding: 360px 30px 60px 30px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width:375px) {
+  .Magic{
+    width: 375px;
+    padding: 360px 10px 60px 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .MagicText{
+    align-items: center;
+    padding-left: 30px;
+  }
+  .MagicTimeBox{
+    left: 10px;
+    top: 420px;
+    margin-top: -260px;
+  }
+  .MagicText p:nth-child(2){
+    margin-bottom: 200px;
+  }
+  .MagicText p:nth-child(1){
+    max-width: 300px;
+  }
+  .MagicText button{
+    width: 90%;
+  }
+}

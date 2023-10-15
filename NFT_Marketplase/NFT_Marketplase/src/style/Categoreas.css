@@ -1,0 +1,149 @@
+.Catedories {
+  display: flex;
+  width: 1280px;
+  margin: 0 auto;
+  padding: 80px 100px;
+  flex-direction: column;
+  gap: 60px;
+  align-self: stretch;
+  background: var(--Background, #2b2b2b);
+}
+.Categoriesp {
+  color: var(--White, #fff);
+  /* H3 - Work Sans */
+  font-family: Work Sans;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 45.6px */
+  text-transform: capitalize;
+}
+
+.catigorisBox {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+.catigoresBox1 {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 20px;
+  background: #3b3b3b;
+}
+.catImgBox1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
+  align-self: stretch;
+  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
+  transition: 1s;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7.5px);
+  background-size: cover;
+  transition: 1s;
+  position: relative;
+}
+.catImgBox1 svg {
+  z-index: 100;
+}
+.catImgBox1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7.5px);
+  z-index: -100;
+  top: 0;
+  left: 0;
+}
+.catImgBox1 {
+  backdrop-filter: blur(7.5px);
+}
+.catImgBox1:hover svg {
+  transform: scale(1.3);
+  transition: 1s;
+}
+.catigoresBox1 p {
+  color: var(--White, #fff);
+  /* H5 - Work Sans */
+  font-family: Work Sans;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 30.8px */
+  text-transform: capitalize;
+  margin: 20px 30px 25px 30px;
+}
+#cat-1 {
+  background-image: url(../components/image/ArtBacround.png);
+  background-repeat: no-repeat;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  backdrop-filter: blur(1.5px);
+}
+#cat-2 {
+  background-image: url(../components/image/CollectibBgc.png);
+  background-repeat: no-repeat;
+}
+#cat-3 {
+  background-image: url(../components/image/MusicBgc.png);
+  background-repeat: no-repeat;
+}
+#cat-4 {
+  background-image: url(../components/image/PhodographBcg.png);
+  background-repeat: no-repeat;
+}
+#cat-5 {
+  background-image: url(../components/image/VidioBcg.png);
+  background-repeat: no-repeat;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  backdrop-filter: blur(1.5px);
+}
+#cat-6 {
+  background-image: url(../components/image/UnitilyBcg.png);
+  background-repeat: no-repeat;
+}
+#cat-7 {
+  background-image: url(../components/image/SportBcg.png);
+  background-repeat: no-repeat;
+}
+#cat-8 {
+  background-image: url(../components/image/virtualWordsBcg.png);
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 800px) {
+  .Catedories {
+    width: 800px;
+    padding: 40px 20px;
+    overflow: hidden;
+  }
+  .catigorisBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .Catedories {
+    width: 375px;
+    padding: 40px 10px;
+  }
+  .catigorisBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin: 0 auto
+  }
+  #CatigorBoxNone{
+    display: none;
+  }
+}
