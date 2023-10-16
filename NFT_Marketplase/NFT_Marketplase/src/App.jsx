@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Header from "./components/Header";
 import Collection from "./components/Collection";
 import Creators from "./components/Creators";
@@ -22,7 +21,6 @@ function App() {
       <Weekly />
       <Footer />
     </>
-    
   );
 }
 
