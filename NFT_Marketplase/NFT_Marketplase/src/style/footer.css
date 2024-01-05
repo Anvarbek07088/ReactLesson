@@ -1,3 +1,8 @@
+
+.Footer{
+  background: var(--Background---Secondary, #3b3b3b);
+}
+
 .footer {
   width: 1280px;
   margin: 0 auto;

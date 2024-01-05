@@ -3,7 +3,8 @@ import "../style/footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
+   <div className="Footer">
+     <div className="footer">
       <div className="footerBox">
         <div className="footerBox1">
           <p><img src={NFTlogo} alt="rasm" /></p>
@@ -172,6 +173,7 @@ const Footer = () => {
         <span>Toshmamatov Anvarbek</span>
       </p>
     </div>
+   </div>
   );
 };
 export default Footer;

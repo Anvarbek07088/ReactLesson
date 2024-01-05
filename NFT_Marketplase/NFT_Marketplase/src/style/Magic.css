@@ -1,3 +1,5 @@
+
+
 .Magic {
   width: 1280px;
   margin: 0 auto;
@@ -8,6 +10,7 @@
   align-self: stretch;
   background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
   background-image: url(../components/image/MagicBacround.png);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -115,42 +118,45 @@
   line-height: 110%; /* 13.2px */
 }
 
-@keyframes animate{
-    0%{
-        opacity: 0;
-        transform: translateY(100%) scale(0.5);
-    }
-    5%, 20%{
-        opacity: 0.4;
-        transform: translateY(100%) scale(0.7);
-    }
-    25%,40%{
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0%) scale(1);
-    }
-    45%, 60%{
-        opacity: 0.4;
-        transform: translateY(-100%) scale(0.7);
-    }
-    65%{
-        opacity: 0.4;
-        transform: translateY(-100%) scale(0.5);
-    }
-    100%{
-        opacity: 0;
-        transform: translateY(-100%) scale(0);
-    }
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) scale(0.5);
+  }
+  5%,
+  20% {
+    opacity: 0.4;
+    transform: translateY(100%) scale(0.7);
+  }
+  25%,
+  40% {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0%) scale(1);
+  }
+  45%,
+  60% {
+    opacity: 0.4;
+    transform: translateY(-100%) scale(0.7);
+  }
+  65% {
+    opacity: 0.4;
+    transform: translateY(-100%) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0);
+  }
 }
-@media screen and (max-width:800px) {
-  .Magic{
+@media screen and (max-width: 800px) {
+  .Magic {
     width: 800px;
     padding: 360px 30px 60px 30px;
     overflow: hidden;
   }
 }
-@media screen and (max-width:375px) {
-  .Magic{
+@media screen and (max-width: 375px) {
+  .Magic {
     width: 375px;
     padding: 360px 10px 60px 10px;
     position: relative;
@@ -158,22 +164,22 @@
     flex-direction: column;
     align-items: center;
   }
-  .MagicText{
+  .MagicText {
     align-items: center;
     padding-left: 30px;
   }
-  .MagicTimeBox{
+  .MagicTimeBox {
     left: 10px;
     top: 420px;
     margin-top: -260px;
   }
-  .MagicText p:nth-child(2){
+  .MagicText p:nth-child(2) {
     margin-bottom: 200px;
   }
-  .MagicText p:nth-child(1){
+  .MagicText p:nth-child(1) {
     max-width: 300px;
   }
-  .MagicText button{
+  .MagicText button {
     width: 90%;
   }
 }

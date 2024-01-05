@@ -37,7 +37,8 @@ const Magic = () => {
     }
   });
   return (
-    <div className="Magic">
+    <div className="magicc">
+      <div className="Magic">
       <div className="MagicText">
         <p>
           <img src={Avatar1} alt="rasm" /> Shroomie
@@ -70,6 +71,7 @@ const Magic = () => {
           </ul>
         </div>
       </div>
+    </div>
     </div>
   );
 };

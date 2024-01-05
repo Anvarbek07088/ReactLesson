@@ -4,8 +4,26 @@ import RacetaImg from "./image/RocketLaunch.svg";
 import headerImg from "./image/Imageheader1.png";
 import userSmall from "./image/AssetUserImgSmall.svg";
 import "../style/header.css";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  let [folow1, setFolow1] = useState(0);
+  let [folow2, setFolow2] = useState(0);
+
+  useEffect(() => {
+    const folowTimer1 = setTimeout(() => {
+      if (folow1 == 240) {
+        return () => clearTimeout(folowTimer1);
+      }
+      setFolow1(folow1 + 1);
+    }, 1);
+    const folowTimer2 = setTimeout(() => {
+      if (folow2 == 100) {
+        return () => clearTimeout(folowTimer2);
+      }
+      setFolow2(folow2 + 1);
+    }, 4);
+  });
   return (
     <>
       <nav>
@@ -29,8 +47,8 @@ const Header = () => {
           </button>
         </div>
       </nav>
-      <div className="headerSection" >
-        <div className="headerText" >
+      <div className="headerSection">
+        <div className="headerText">
           <p className="headerP1">Discover digital art & Collect NFTs</p>
           <p className="headerP2">
             NFT marketplace UI created with Anima for Figma. Collect, buy and
@@ -41,21 +59,26 @@ const Header = () => {
           </button>
           <ul className="headerSecUl">
             <li>
-              <p>240k+</p>
+              <p>{folow1}k+</p>
               <span>Total Sale</span>
             </li>
             <li>
-              <p>100k+</p>
+              <p>{folow2}k+</p>
               <span>Auctions</span>
             </li>
             <li>
-              <p>240k+</p>
+              <p>{folow1}k+</p>
               <span>Artists</span>
             </li>
           </ul>
         </div>
-        <div className="headerImg" >
-          <img src={headerImg} alt="rasm" loading="lazy" className="headerImg1"/>
+        <div className="headerImg">
+          <img
+            src={headerImg}
+            alt="rasm"
+            loading="lazy"
+            className="headerImg1"
+          />
           <p>Space Walking</p>
           <span>
             <img src={userSmall} alt="rasm" loading="lazy" /> Animakid
